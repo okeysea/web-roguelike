@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  client:
+    build:
+      context: .
+      dockerfile: ./containers/nodejs/Dockerfile
+    volumes:
+      - ./client:/client
+    command: npm start
+    ports:
+      - 3000:3000
